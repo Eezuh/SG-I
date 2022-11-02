@@ -5,12 +5,12 @@ using UnityEngine;
 public class CreatureAmbienceScript : MonoBehaviour
 {
     public AudioClip CreatureAmbienceClip;
-    private AudioSource ThisAudioSource;
+    public AudioSource ThisAudioSource;
     public int FrequencyProfile; //1 = constant, 2 is frequent, 3 every now and then
 
     private void Start()
     {
-        ThisAudioSource = this.gameObject.GetComponent<AudioSource>();
+        ThisAudioSource = this.gameObject.GetComponentInChildren<AudioSource>();
         ThisAudioSource.clip = CreatureAmbienceClip;
 
         switch (FrequencyProfile)

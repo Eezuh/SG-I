@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public enum dstate
 {
+    done,
     fastaprouch,
     aprouch, 
     sniff, 
@@ -33,6 +34,7 @@ public class DocileMonster : monstermovement
     public AudioClip running;
     public AudioClip walking;
     public AudioClip attacking;
+    public AudioClip attack;
     public AudioClip sniffing;
     public AudioClip call;
     private bool sniffed = false;
@@ -47,6 +49,7 @@ public class DocileMonster : monstermovement
         adirs = new List<int>();
         adirs.Add(0); adirs.Add(1); adirs.Add(2); adirs.Add(3);
         timessniffed = 0;
+        state = dstate.fastaprouch;
     }
 
     private void BackOff()
@@ -57,10 +60,10 @@ public class DocileMonster : monstermovement
             footsteps.Play();
         }
         speed = fastSpeed;
-        Vector3 d = transform.position - player.position;
+        Vector3 d = transform.position - player.transform.position;
         Vector2 dir = new Vector2(d.x, d.z);
         desiredpos = dir * 10 + new Vector2(transform.position.x, transform.position.z);
-        if (Vector3.Distance(transform.position,player.position) >= 50)
+        if (Vector3.Distance(transform.position,player.transform.position) >= 50)
         {
             Destroy(gameObject);
         }
@@ -77,10 +80,10 @@ public class DocileMonster : monstermovement
             footsteps.Play();
         }
         speed = fastSpeed;
-        Vector3 d = transform.position - player.position;
+        Vector3 d = transform.position - player.transform.position;
         d.Normalize();
-        desiredpos = new Vector2(d.x, d.z) * fastdistance + new Vector2(player.position.x, player.position.z);
-        if (Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(player.position.x, player.position.z)) <= fastdistance)
+        desiredpos = new Vector2(d.x, d.z) * fastdistance + new Vector2(player.transform.position.x, player.transform.position.z);
+        if (Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(player.transform.position.x, player.transform.position.z)) <= fastdistance)
         {
             if (anounced)
             {
@@ -120,7 +123,7 @@ public class DocileMonster : monstermovement
             mSound.Play();
         }
         speed = fastSpeed;
-        desiredpos = new Vector2(player.position.x, player.position.z);
+        desiredpos = new Vector2(player.transform.position.x, player.transform.position.z);
     }
 
     private void Sniff()
@@ -182,20 +185,20 @@ public class DocileMonster : monstermovement
         switch (direction)
         {
             case direction.front:
-                d = player.forward * closedistance + player.position;
+                d = player.transform.forward * closedistance + player.transform.position;
 
                 break;
             case direction.left:
-                d = player.right * -1 * closedistance + player.position;
+                d = player.transform.right * -1 * closedistance + player.transform.position;
                 break;
             case direction.right:
-                d = player.right * closedistance + player.position;
+                d = player.transform.right * closedistance + player.transform.position;
                 break;
             case direction.back:
-                d = player.forward * -1 * closedistance + player.position;
+                d = player.transform.forward * -1 * closedistance + player.transform.position;
                 break;
             default:
-                d = player.forward * -1 * closedistance + player.position;
+                d = player.transform.forward * -1 * closedistance + player.transform.position;
                 break;
         }
         desiredpos = new Vector2(d.x, d.z);
@@ -225,6 +228,36 @@ public class DocileMonster : monstermovement
             default:
                 break;
         }
+
+        Checkmovement();
+
+    }
+
+    void Checkmovement()
+    {
+        if (state != dstate.attack || state != dstate.fastaprouch)
+        {
+
+            if (torch.PlayerIsSwinging)
+            {
+                Debug.Log("Swing");
+                state = dstate.attack;
+
+            }
+        }
+    }
+
+    public override void FinalSmash()
+    {
+        if (state == dstate.attack)
+        {
+            mSound.clip = attack;
+            mSound.Play();
+            mSound.loop = false;
+            state = dstate.done;
+            footsteps.Stop();
+        }
+
 
     }
 }

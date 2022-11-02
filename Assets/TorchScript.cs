@@ -18,7 +18,7 @@ public class TorchScript : MonoBehaviour
     public Camera TorchCamera;
     public float TranslationSpeed;
 
-    int TorchMovementSpeed; //0 = static, 1 = slow, 2 = fast
+    public int TorchMovementSpeed; //0 = static, 1 = slow, 2 = fast
 
     float ScreenPercentageX;
     float ScreenPercentageY;

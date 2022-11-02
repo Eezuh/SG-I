@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3116852264421961919}
   m_Layer: 0
   m_Name: DoscileMonster
-  m_TagString: Untagged
+  m_TagString: DocileMon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredpos: {x: 0, y: 0}
   player: {fileID: 0}
+  torch: {fileID: 0}
   speed: 4
   offset: 0.2
   still: 0
@@ -129,11 +130,12 @@ MonoBehaviour:
   timessniffed: 0
   timestosniff: 2
   timer: 0
-  running: {fileID: 8300000, guid: 270e6d4a40ed91d49a6c577a45b793ee, type: 3}
-  walking: {fileID: 8300000, guid: cb89abf12b04f144ab1caacc298c2ea0, type: 3}
-  attacking: {fileID: 8300000, guid: 270e6d4a40ed91d49a6c577a45b793ee, type: 3}
-  sniffing: {fileID: 8300000, guid: cb89abf12b04f144ab1caacc298c2ea0, type: 3}
-  call: {fileID: 8300000, guid: 9f269cd49ebf50f49add617b51e97542, type: 3}
+  running: {fileID: 8300000, guid: 1602adbc7c2de7d47862ece4529bc5ab, type: 3}
+  walking: {fileID: 8300000, guid: 9dd3557958e56d4439e44e2dc4deb8f9, type: 3}
+  attacking: {fileID: 8300000, guid: 633bba2b9dba3ca4998960b8976c05b5, type: 3}
+  attack: {fileID: 8300000, guid: 3ef7b428f34fa88499cba81aa9c45fca, type: 3}
+  sniffing: {fileID: 8300000, guid: aad606326d66d3a4eb4ab8f309028c4a, type: 3}
+  call: {fileID: 8300000, guid: 633bba2b9dba3ca4998960b8976c05b5, type: 3}
 --- !u!82 &2289813993943336871
 AudioSource:
   m_ObjectHideFlags: 0

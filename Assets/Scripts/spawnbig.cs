@@ -27,7 +27,8 @@ public class spawnbig : MonoBehaviour
             spawnloc = new Vector3(spawnloc.x, 0.5f, spawnloc.z);
             GameObject b = Instantiate(bigC);
             b.transform.position = spawnloc;
-            b.GetComponent<BigMovement>().player = other.transform;
+            b.GetComponent<BigMovement>().player = other.gameObject;
+            b.GetComponent<BigMovement>().torch = other.GetComponentInChildren<TorchScript>();
             Destroy(gameObject);
         }
     }

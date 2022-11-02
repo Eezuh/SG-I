@@ -6,7 +6,8 @@ using UnityEngine;
 public class monstermovement : MonoBehaviour
 {
     public Vector2 desiredpos;
-    public Transform player;
+    public GameObject player;
+    public TorchScript torch;
     public float speed;
     public float offset;
     public bool still;
@@ -35,5 +36,10 @@ public class monstermovement : MonoBehaviour
             transform.position = new Vector3(newpos.x, transform.position.y, newpos.y);
             still = false;
         }
+    }
+
+    public virtual void FinalSmash()
+    {
+
     }
 }

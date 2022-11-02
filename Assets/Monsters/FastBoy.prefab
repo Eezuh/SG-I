@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 209963720066685145}
   m_Layer: 0
   m_Name: FastBoy
-  m_TagString: Untagged
+  m_TagString: FastMon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,8 +95,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955073981459889242}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -210,6 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredpos: {x: 0, y: 0}
   player: {fileID: 0}
+  torch: {fileID: 0}
   speed: 8
   offset: 0.2
   still: 0
@@ -221,8 +222,9 @@ MonoBehaviour:
   scared: 0
   whimpering: {fileID: 8300000, guid: 01d608b5c3dad8046bcd9e288a5db3ff, type: 3}
   running: {fileID: 8300000, guid: 84887bad61e122145a77c2b3a6845f25, type: 3}
-  attacking: {fileID: 8300000, guid: acf301c31f6cc6e4bb4825cb82869b99, type: 3}
+  attacking: {fileID: 8300000, guid: d8446fef299b29d48857070b412ae71f, type: 3}
   howling: {fileID: 8300000, guid: 2d7e268d479c9bc4486a4862c937ef58, type: 3}
+  attack: {fileID: 8300000, guid: 99b89fb94b4e7e149899ef820bc7db36, type: 3}
 --- !u!82 &209963720066685145
 AudioSource:
   m_ObjectHideFlags: 0

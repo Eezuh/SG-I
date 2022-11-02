@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum bigstate
 {
+    done,
     Anounce, 
     Chase
 }
@@ -16,6 +17,7 @@ public class BigMovement : monstermovement
     public float timer;
     public AudioClip aprouchfootsteps;
     public AudioClip chasefootsteps;
+    public AudioClip attack;
     public AudioClip anounceGrowl;
     private bool hasanounced = false;
     // Start is called before the first frame update
@@ -23,6 +25,7 @@ public class BigMovement : monstermovement
     {
         base.Start();
         footsteps.clip = aprouchfootsteps;
+        state = bigstate.Anounce;
     }
 
     // Update is called once per frame
@@ -40,7 +43,7 @@ public class BigMovement : monstermovement
             default:
                 break;
         }
-        if (Vector3.Distance(transform.position, player.position) >= 50)
+        if (Vector3.Distance(transform.position, player.transform.position) >= 50)
         {
             Destroy(gameObject);
         }
@@ -74,11 +77,11 @@ public class BigMovement : monstermovement
         }
         else
         {
-            Vector3 d = transform.position - player.position;
+            Vector3 d = transform.position - player.transform.position;
             d.Normalize();
-            desiredpos = new Vector2(d.x, d.z) * anouncedis + new Vector2(player.position.x, player.position.z);
+            desiredpos = new Vector2(d.x, d.z) * anouncedis + new Vector2(player.transform.position.x, player.transform.position.z);
         }
-        float distance = Vector3.Distance(transform.position,player.position);
+        float distance = Vector3.Distance(transform.position,player.transform.position);
         if (distance <= anouncedis && !arrived)
         {
             arrived = true;
@@ -89,7 +92,18 @@ public class BigMovement : monstermovement
     }
     void Chase()
     {
-        desiredpos = new Vector2(player.position.x,player.position.z);
+        desiredpos = new Vector2(player.transform.position.x,player.transform.position.z);
 
+    }
+    public override void FinalSmash()
+    {
+        if (state == bigstate.Chase)
+        {
+            mSound.clip = attack;
+            mSound.Play();
+            mSound.loop = false;
+            state = bigstate.done;
+            footsteps.Stop();
+        }
     }
 }

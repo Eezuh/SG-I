@@ -26,8 +26,11 @@ public class spawnDocile : MonoBehaviour
             spawnloc = new Vector3(spawnloc.x, 0.5f, spawnloc.z);
             GameObject d = Instantiate(DocileC);
             d.transform.position = spawnloc;
-            d.GetComponent<DocileMonster>().player = other.transform;
+            d.GetComponent<DocileMonster>().player = other.gameObject;
+            d.GetComponent<DocileMonster>().torch = other.GetComponentInChildren<TorchScript>();
             Destroy(gameObject);
         }
     }
+
+    
 }

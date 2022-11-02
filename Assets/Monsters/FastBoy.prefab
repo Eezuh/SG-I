@@ -222,6 +222,7 @@ MonoBehaviour:
   whimpering: {fileID: 8300000, guid: 01d608b5c3dad8046bcd9e288a5db3ff, type: 3}
   running: {fileID: 8300000, guid: 84887bad61e122145a77c2b3a6845f25, type: 3}
   attacking: {fileID: 8300000, guid: acf301c31f6cc6e4bb4825cb82869b99, type: 3}
+  howling: {fileID: 8300000, guid: 2d7e268d479c9bc4486a4862c937ef58, type: 3}
 --- !u!82 &209963720066685145
 AudioSource:
   m_ObjectHideFlags: 0

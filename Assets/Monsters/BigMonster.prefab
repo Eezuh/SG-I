@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2638381694351785833}
   - component: {fileID: 2638381694351785832}
   - component: {fileID: 2638381694351785831}
-  - component: {fileID: 2638381694351785830}
   - component: {fileID: 3299009853010208967}
   - component: {fileID: 6462237559325405442}
+  - component: {fileID: 6748115108868779713}
   m_Layer: 0
   m_Name: BigMonster
   m_TagString: Untagged
@@ -100,32 +100,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2638381694351785830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2638381694351785829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fac51120d332ce40b661f7c70eca8f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desiredpos: {x: 0, y: 0}
-  player: {fileID: 0}
-  speed: 5
-  offset: 0.2
-  still: 0
-  footsteps: {fileID: 6462237559325405442}
-  mSound: {fileID: 3299009853010208967}
-  state: 0
-  anounceTime: 2
-  anouncedis: 8
-  arrived: 0
-  timer: 0
-  aprouchfootsteps: {fileID: 8300000, guid: 270e6d4a40ed91d49a6c577a45b793ee, type: 3}
-  chasefootsteps: {fileID: 8300000, guid: cb89abf12b04f144ab1caacc298c2ea0, type: 3}
 --- !u!82 &3299009853010208967
 AudioSource:
   m_ObjectHideFlags: 0
@@ -318,3 +292,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6748115108868779713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2638381694351785829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fac51120d332ce40b661f7c70eca8f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredpos: {x: 0, y: 0}
+  player: {fileID: 0}
+  speed: 0
+  offset: 0
+  still: 0
+  footsteps: {fileID: 6462237559325405442}
+  mSound: {fileID: 3299009853010208967}
+  state: 0
+  anounceTime: 0
+  anouncedis: 5
+  arrived: 0
+  timer: 5
+  aprouchfootsteps: {fileID: 8300000, guid: 270e6d4a40ed91d49a6c577a45b793ee, type: 3}
+  chasefootsteps: {fileID: 8300000, guid: cb89abf12b04f144ab1caacc298c2ea0, type: 3}
+  anounceGrowl: {fileID: 8300000, guid: 7efcc6242fe24914fa9388efaa37515e, type: 3}

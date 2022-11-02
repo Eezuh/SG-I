@@ -107,8 +107,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4901765770426109104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 234489bff1b7ac844880795db8e49c6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 69f76b008b1aa204a941ec1d728e4ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   FastC: {fileID: 1955073981459889242, guid: cfe28d42fde328e4c9b2398f65f104aa, type: 3}
-  radius: 20
+  radius: 15

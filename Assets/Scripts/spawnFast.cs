@@ -28,7 +28,7 @@ public class spawnFast : MonoBehaviour
             spawnloc = new Vector3(spawnloc.x, 0.5f, spawnloc.z);
             GameObject f = Instantiate(FastC);
             f.transform.position = spawnloc;
-           // f.GetComponent<FastboyMovement>().player = other.transform;
+            f.GetComponent<FastboyMovement>().player = other.transform;
 
         }
         Destroy(gameObject);

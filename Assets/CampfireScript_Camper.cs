@@ -33,6 +33,12 @@ public class CampfireScript_Camper : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         NPCSource.PlayOneShot(Line_01);
+        StartCoroutine(Stick());
+    }
+
+    private IEnumerator Stick()
+    {
+        yield return new WaitForSeconds(21f);
         StickFall.PlayOneShot(StickEffect);
     }
 }

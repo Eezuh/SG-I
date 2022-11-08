@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class CampfireScript_Camper : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class CampfireScript_Camper : MonoBehaviour
     public AudioClip Humming;
     public AudioClip Line_01;
     public AudioClip StickEffect;
+    public GameObject lake;
 
     void Start()
     {
@@ -34,5 +36,6 @@ public class CampfireScript_Camper : MonoBehaviour
         yield return new WaitForSeconds(2f);
         NPCSource.PlayOneShot(Line_01);
         StickFall.PlayOneShot(StickEffect);
+        lake.SetActive(true);
     }
 }

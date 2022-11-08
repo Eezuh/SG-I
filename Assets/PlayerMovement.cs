@@ -35,19 +35,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            this.gameObject.transform.Rotate(new Vector3(0, -RotationSpeed, 0));
+            this.gameObject.transform.Rotate(new Vector3(0, -RotationSpeed * Time.deltaTime, 0));
         }
         if (Input.GetKey(KeyCode.D))
         {
-            this.gameObject.transform.Rotate(new Vector3(0, RotationSpeed, 0));
+            this.gameObject.transform.Rotate(new Vector3(0, RotationSpeed * Time.deltaTime, 0));
         }
         if (Input.GetKey(KeyCode.W))
         {
-            this.gameObject.transform.Translate(new Vector3(0, 0, MovementSpeed));
+            this.gameObject.transform.Translate(new Vector3(0, 0, MovementSpeed * Time.deltaTime));
         }
         if (Input.GetKey(KeyCode.S))
         {
-            this.gameObject.transform.Translate(new Vector3(0, 0, -MovementSpeed));
+            this.gameObject.transform.Translate(new Vector3(0, 0, -MovementSpeed * Time.deltaTime));
         }
 
         if (Input.GetKeyDown(KeyCode.W))

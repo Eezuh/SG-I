@@ -210,7 +210,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -252,7 +252,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -307,17 +307,17 @@ MonoBehaviour:
   desiredpos: {x: 0, y: 0}
   player: {fileID: 0}
   torch: {fileID: 0}
-  speed: 5
+  speed: 1
   offset: 0.2
   still: 0
   footsteps: {fileID: 6462237559325405442}
   mSound: {fileID: 3299009853010208967}
-  state: 0
+  state: 1
   anounceTime: 0
-  anouncedis: 5
+  anouncedis: 3
   arrived: 0
   timer: 5
   aprouchfootsteps: {fileID: 8300000, guid: 270e6d4a40ed91d49a6c577a45b793ee, type: 3}
   chasefootsteps: {fileID: 8300000, guid: cb89abf12b04f144ab1caacc298c2ea0, type: 3}
-  attack: {fileID: 8300000, guid: 270e6d4a40ed91d49a6c577a45b793ee, type: 3}
-  anounceGrowl: {fileID: 8300000, guid: 270e6d4a40ed91d49a6c577a45b793ee, type: 3}
+  attack: {fileID: 8300000, guid: 2a11e1ddb425cb8418e82d98a777d001, type: 3}
+  anounceGrowl: {fileID: 8300000, guid: 7252f863a70d06a4bacd50fe2b2a5456, type: 3}

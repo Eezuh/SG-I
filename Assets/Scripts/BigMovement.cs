@@ -43,7 +43,7 @@ public class BigMovement : monstermovement
             default:
                 break;
         }
-        if (Vector3.Distance(transform.position, player.transform.position) >= 50)
+        if (Vector3.Distance(transform.position, player.transform.position) >= 20)
         {
             Destroy(gameObject);
         }

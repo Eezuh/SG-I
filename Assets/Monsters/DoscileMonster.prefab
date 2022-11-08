@@ -122,13 +122,13 @@ MonoBehaviour:
   mSound: {fileID: 2289813993943336871}
   state: 0
   fastdistance: 8
-  fastSpeed: 12
+  fastSpeed: 15
   slowSpeed: 3
   closedistance: 1
   snifftime: 4
   direction: 4
   timessniffed: 0
-  timestosniff: 2
+  timestosniff: 3
   timer: 0
   running: {fileID: 8300000, guid: 1602adbc7c2de7d47862ece4529bc5ab, type: 3}
   walking: {fileID: 8300000, guid: 9dd3557958e56d4439e44e2dc4deb8f9, type: 3}

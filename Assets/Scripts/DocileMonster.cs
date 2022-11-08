@@ -235,7 +235,7 @@ public class DocileMonster : monstermovement
 
     void Checkmovement()
     {
-        if (state != dstate.attack || state != dstate.fastaprouch)
+        if (state != dstate.attack || state != dstate.fastaprouch || state != dstate.backoff)
         {
 
             if (torch.PlayerIsSwinging)

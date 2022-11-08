@@ -211,7 +211,7 @@ MonoBehaviour:
   desiredpos: {x: 0, y: 0}
   player: {fileID: 0}
   torch: {fileID: 0}
-  speed: 8
+  speed: 12
   offset: 0.2
   still: 0
   footsteps: {fileID: 209963720066685145}
@@ -221,7 +221,7 @@ MonoBehaviour:
   AsaultTime: 10
   scared: 0
   whimpering: {fileID: 8300000, guid: 01d608b5c3dad8046bcd9e288a5db3ff, type: 3}
-  running: {fileID: 8300000, guid: 84887bad61e122145a77c2b3a6845f25, type: 3}
+  running: {fileID: 8300000, guid: 9afe386401ec9394b9f97096dff571e6, type: 3}
   attacking: {fileID: 8300000, guid: d8446fef299b29d48857070b412ae71f, type: 3}
   howling: {fileID: 8300000, guid: 2d7e268d479c9bc4486a4862c937ef58, type: 3}
   attack: {fileID: 8300000, guid: 99b89fb94b4e7e149899ef820bc7db36, type: 3}

@@ -111,4 +111,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bigC: {fileID: 2638381694351785829, guid: d5b6b6697b937ef46b4d890db2c96102, type: 3}
-  radius: 6
+  radius: 2

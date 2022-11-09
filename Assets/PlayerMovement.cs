@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip FS_Leaves;
     public AudioClip FS_Puddle;
     public AudioClip FS_Stone;
+    public AudioClip FS_Sand;
 
     private bool IsWalkingA;
     private bool IsWalkingS;
@@ -104,6 +105,11 @@ public class PlayerMovement : MonoBehaviour
                 FootstepsSource.clip = FS_Puddle;
                 FootstepsSource.Play();
                 break;
+            case 14:
+                FootstepsSource.clip = FS_Sand;
+                FootstepsSource.Play();
+                break;
+
         }
 
     }

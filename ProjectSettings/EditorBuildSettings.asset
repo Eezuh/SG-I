@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Playground.unity
     guid: 707acc8dffb72b144bb1ffbe1c965f3d
+  - enabled: 1
+    path: Assets/ForestScene.unity
+    guid: 0468243f31350f64497852841f6a6b26
+  - enabled: 1
+    path: Assets/IntroScene.unity
+    guid: 513e192da56b3954ab13b8eab6ca21a1
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}

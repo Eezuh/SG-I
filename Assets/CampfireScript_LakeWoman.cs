@@ -8,6 +8,9 @@ public class CampfireScript_LakeWoman : MonoBehaviour
 
     public AudioClip Line_01;
     public GameObject sea;
+    public GameObject Cricket01;
+    public GameObject Cricket02;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,6 +18,9 @@ public class CampfireScript_LakeWoman : MonoBehaviour
         {
             NPCSource.PlayOneShot(Line_01);
             sea.SetActive(true);
+            Cricket01.SetActive(false);
+            Cricket02.SetActive(true);
+
         }
     }
 }
